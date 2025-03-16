@@ -22,6 +22,8 @@ function MainContent() {
   const location = useLocation();
   const showNavbar = location.pathname !== "/"; // Hide Navbar on Home Page
 
+  console.log("Current Route:", location.pathname); // Debugging: See if Experience Page is loaded
+
   return (
     <div>
       {showNavbar && <Navbar />}
@@ -38,5 +40,6 @@ function MainContent() {
     </div>
   );
 }
+
 
 export default App;

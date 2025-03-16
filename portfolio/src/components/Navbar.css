@@ -3,91 +3,91 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(69, 44, 99, 0.9); /* Semi-transparent Purple */
-  backdrop-filter: blur(10px); /* Smooth Glass Effect */
+  background: rgba(69, 44, 99, 0.95); /* Dark Purple */
+  backdrop-filter: blur(10px);
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center everything */
   align-items: center;
-  padding: 12px 8%;
+  padding: 12px 0;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
+  font-family: Arial, sans-serif;
+  height: 65px;
 }
 
-/* Portfolio Title */
+/* Navigation Container */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Home Icon */
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #ffcc00; /* Gold Accent */
+  color: #ffcc00;
   cursor: pointer;
   transition: color 0.3s ease;
+  margin-right: 20px;
 }
 
 .logo:hover {
-  color: #f4e04d; /* Lighter Gold Hover */
+  color: #f4e04d;
 }
 
 /* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .nav-links li {
   display: inline-block;
 }
 
+/* Button Styling */
 .nav-links a {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.3rem; /* Bigger Text */
   font-weight: bold;
   color: white;
-  padding: 10px 16px;
+  padding: 12px 18px;
   border-radius: 8px;
   transition: background 0.3s ease, transform 0.2s ease;
+  font-family: Arial, sans-serif;
 }
 
 /* Hover Effect */
 .nav-links a:hover {
-  background: #5c2d91; /* Slightly Brighter Purple */
+  background: #5c2d91;
   transform: scale(1.1);
 }
 
 /* Active Link */
 .nav-links a.active {
-  background: #facc15; /* Highlight Active Page */
+  background: #facc15;
   color: #1a1a2e;
 }
 
-/* Responsive Navbar */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 10%;
-    background: rgba(69, 44, 99, 0.95);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    display: none;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .nav-links a {
-    padding: 10px;
-  }
+/* Remove Menu Icon */
+.menu-icon {
+  display: none;
 }
 
+/* Home Icon */
 .home-icon {
-  font-size: 1.6rem; /* Adjust size */
-  color: white; /* Set to white */
+  font-size: 2rem;
+  color: white;
   transition: color 0.3s ease;
 }
 
 .home-icon:hover {
-  color: #dcdcdc; /* Slightly lighter white on hover */
+  color: #dcdcdc;
 }

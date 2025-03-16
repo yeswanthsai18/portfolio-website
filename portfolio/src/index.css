@@ -18,3 +18,8 @@ body {
   overflow-x: hidden;
 }
 
+/* Ensure all pages start below navbar */
+.page-container {
+  padding-top: 80px; /* Adjust based on navbar height */
+}
+
