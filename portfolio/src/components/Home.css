@@ -1,0 +1,74 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 10%;
+    background: url('https://64.media.tumblr.com/a45219730867a4eb4a4d236f7e7281c1/9cf6d78eec795c43-ff/s540x810/4f1043d29f357159c8d87eae9c3f101f2854753d.gif') center/cover no-repeat; /* Update background */
+    position: relative;
+}
+
+/* Optional: Lighter Overlay */
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(150, 80, 200, 0.4); /* Light purple overlay */
+    z-index: 0;
+}
+
+.home-content {
+    max-width: 600px;
+    z-index: 2;
+    text-align: center;
+    color: #2b0f5d; /* Dark purple text */
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffcc00; /* Gold text */
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ffffff; /* White text */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #7b2cbf; /* Purplish button */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.home-image {
+    z-index: 2;
+    margin-left: 50px;
+}
+
+.home-image img {
+    width: 350px; /* Bigger image */
+    height: auto;
+    border-radius: 0; /* No circular border */
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.8); /* Glowing effect */
+}
