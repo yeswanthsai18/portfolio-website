@@ -1,9 +1,14 @@
 /* Skills Section */
 .skills {
+    font-family: Arial, sans-serif; /* Apply Arial globally */
     text-align: center;
-    padding: 60px 10%;
-    background: linear-gradient(to right, #0f172a, #1e293b); /* Dark Vibrant Background */
+    padding: 100px 10% 60px; /* Added Top Padding to avoid navbar overlap */
+    background: linear-gradient(to right, #2c1a4a, #452c63); /* Matching Purple Background */
     color: white;
+    min-height: 100vh; /* Ensures it takes full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers Content */
 }
 
 /* Section Title */
@@ -16,71 +21,98 @@
 
 /* Skill Category Container */
 .skill-category-container {
-    background: rgba(255, 255, 255, 0.05); /* Semi-transparent container */
+    font-family: Arial, sans-serif; /* Ensure category uses Arial */
+    background: rgba(255, 255, 255, 0.08); /* Semi-transparent Container */
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 12px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 1000px; /* Keeps category width consistent */
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .skill-category-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(255, 255, 255, 0.2);
 }
 
 /* Category Title */
 .skill-category {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: bold;
-    color: #facc15; /* Yellow highlight */
-    margin-bottom: 20px;
+    color: #ffcc00; /* Gold Highlight */
+    margin-bottom: 15px;
     text-transform: uppercase;
 }
 
-/* Skills Grid */
+/* Skills Grid - Single Line */
 .skills-grid {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Ensures single line */
     justify-content: center;
-    gap: 20px; /* Ensures even spacing */
+    gap: 10px;
     padding: 10px 0;
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    scrollbar-width: none; /* Hides scrollbar for cleaner UI */
 }
 
-/* Skill Card */
+/* Skill Card - Smaller but Readable */
 .skill-card {
+    font-family: Arial, sans-serif; /* Ensures text inside cards is Arial */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 140px; /* Uniform size */
-    height: 140px;
+    width: 100px; /* Reduced size */
+    height: 100px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
+    border-radius: 10px;
     border: 2px solid transparent;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 15px;
+    padding: 10px;
+    flex-shrink: 0;
 }
 
 .skill-card:hover {
     transform: scale(1.05);
-    border-color: #facc15;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.15);
+    border-color: #ffcc00;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2);
 }
 
 /* Skill Icon */
 .skill-icon {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 6px;
 }
 
 /* Skill Name */
 .skill-card p {
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: bold;
     color: white;
     text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .skills {
+        padding-top: 120px; /* Adjust for mobile view */
+    }
+    .skills-grid {
+        overflow-x: auto; /* Ensures horizontal scrolling */
+        justify-content: flex-start;
+        padding: 5px;
+    }
+    .skill-card {
+        width: 90px;
+        height: 90px;
+    }
+    .skill-icon {
+        font-size: 1.8rem;
+    }
+    .skill-card p {
+        font-size: 0.75rem;
+    }
 }

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -11,13 +11,22 @@ import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 
 function App() {
-  const [showNavbar, setShowNavbar] = useState(false); // State to control Navbar visibility
-
   return (
     <Router>
-      {showNavbar && <Navbar />} {/* Show Navbar only after clicking View Portfolio */}
+      <MainContent />
+    </Router>
+  );
+}
+
+function MainContent() {
+  const location = useLocation();
+  const showNavbar = location.pathname !== "/"; // Hide Navbar on Home Page
+
+  return (
+    <div>
+      {showNavbar && <Navbar />}
       <Routes>
-        <Route path="/" element={<Home setShowNavbar={setShowNavbar} />} /> {/* Pass setShowNavbar */}
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
@@ -26,7 +35,7 @@ function App() {
         <Route path="/experience" element={<Experience />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    </Router>
+    </div>
   );
 }
 

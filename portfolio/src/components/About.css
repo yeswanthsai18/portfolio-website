@@ -1,38 +1,124 @@
 .about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 10%;
-    background: #f5f5f5;
-  }
-  
-  .about-content {
-    display: flex;
-    align-items: center;
-    max-width: 900px;
-  }
-  
-  .profile-pic {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    margin-right: 30px;
-    border: 4px solid #ffcc00;
-  }
-  
-  .text {
-    max-width: 600px;
-  }
-  
-  .text h2 {
-    font-size: 2.2rem;
-    color: #1a1a2e;
-    margin-bottom: 10px;
-  }
-  
-  .text p {
-    font-size: 1.2rem;
-    color: #333;
-    line-height: 1.6;
-  }
-  
+  background: linear-gradient(to right, #2c1a4a, #452c63); /* Purple theme */
+  color: white;
+  padding: 80px 10%;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  min-height: 100vh; /* Ensures Full Page Scroll */
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* About Container */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Profile Image */
+.about-image img {
+  width: 200px; /* Slightly Bigger */
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+}
+
+/* Info Cards in Two Rows */
+.about-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.info-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Icons */
+.icon {
+  font-size: 1.2rem;
+  color: #ffcc00; /* Complementary to Purple */
+}
+
+/* Email Link */
+.info-card a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.info-card a:hover {
+  text-decoration: underline;
+}
+
+/* About Bio Container */
+.about-bio {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 30px;
+  font-size: 1rem;
+  text-align: left;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  overflow-y: auto;
+}
+
+/* Highlights Section */
+.highlights-section {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+}
+
+.highlights-section h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.highlights-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.highlights-section li {
+  font-size: 1rem;
+  padding: 5px 0;
+}
+
+/* Make Page Scrollable but Keep Background */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+}

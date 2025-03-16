@@ -1,22 +1,73 @@
 import React from "react";
 import "./About.css";
-import profilePic from "C:/Users/yeswa/myprofile/portfolio-website/portfolio/src/gojo.webp"; // Add your image
+import aboutImage from "../gojo.webp"; // Ensure correct path
+import { FaEnvelope, FaMapMarkerAlt, FaPhone, FaUser, FaArrowRight } from "react-icons/fa"; // Added new arrow icon
 
 function About() {
   return (
-    <section className="about" id="about">
-      <div className="about-content">
-        <img src={profilePic} alt="Profile" className="profile-pic" />
-        <div className="text">
-          <h2>About Me</h2>
-          <p>
-            I am <strong>Yeswanth Sai Tirumalasetty</strong>, a data-driven software engineer specializing in 
-            <strong>data analytics, machine learning, and cloud-based solutions.</strong> With expertise in Python, SQL, 
-            and Big Data technologies, I build <strong>scalable ETL workflows, predictive models, and AI-powered applications.</strong>
-          </p>
-          <p>
-            Passionate about leveraging data for impactful insights, I thrive on solving complex problems and optimizing data-driven solutions.
-          </p>
+    <section className="about">
+      <h2 className="section-title">ABOUT ME</h2>
+
+      {/* About Container */}
+      <div className="about-container">
+        {/* Profile Image */}
+        <div className="about-image">
+          <img src={aboutImage} alt="Profile" />
+        </div>
+
+        {/* Information Cards (2x2 Grid) */}
+        <div className="about-details">
+          <div className="info-card"><FaUser className="icon" /> <span>Yeswanth Sai Tirumalasetty</span></div>
+          <div className="info-card"><FaMapMarkerAlt className="icon" /> <span>Kent, OH, United States</span></div>
+          <div className="info-card">
+            <FaEnvelope className="icon" /> 
+            <a href="mailto:your-email@example.com">yeswanth1809@gmail.com</a>
+          </div>
+          <div className="info-card"><FaPhone className="icon" /> <span>+1 3305546629</span></div>
+        </div>
+      </div>
+
+      {/* About Bio Container */}
+      <div className="about-bio">
+        <p>
+          Driven by a strong passion for data science, I have cultivated 3 years of hands-on experience 
+          in data analytics, data engineering, and machine learning. My professional journey is fueled 
+          by a desire to transform complex data into impactful solutions, a fascination sparked in my 
+          childhood by a love for solving intricate puzzles and understanding the logic behind them. 
+        </p>
+        <p>
+          This early curiosity evolved into a professional pursuit, and I find immense satisfaction in 
+          building efficient data pipelines and developing machine learning models that automate 
+          processes and provide actionable insights. I am adept at building and optimizing data pipelines, 
+          ETL workflows, and data architectures, leveraging technologies such as Python, SQL, PySpark, 
+          and cloud platforms (AWS, Azure).
+        </p>
+        <p>
+          I am particularly enthusiastic about applying machine learning frameworks (TensorFlow, 
+          Keras, Scikit-learn) to develop predictive analytics, anomaly detection, and recommendation 
+          systems that drive business intelligence. Beyond technical proficiency, I am committed to 
+          continuous learning and seek opportunities to contribute to innovative, data-driven initiatives.
+        </p>
+
+        {/* Key Skills Section */}
+        <div className="highlights-section">
+          <h3>Key Skills and Expertise:</h3>
+          <ul>
+            <li><FaArrowRight className="bullet-icon" /> Proficient in Python, SQL, PySpark, Apache Hadoop, and cloud computing platforms (AWS, Azure) for scalable data solutions.</li>
+            <li><FaArrowRight className="bullet-icon" /> Experienced in building and optimizing high-performance data pipelines and ETL workflows.</li>
+            <li><FaArrowRight className="bullet-icon" /> Skilled in applying machine learning frameworks (TensorFlow, Keras, Scikit-learn) and NLP techniques for predictive analytics, anomaly detection, and recommendation systems.</li>
+            <li><FaArrowRight className="bullet-icon" /> Adept in feature engineering, statistical modeling, and data mining to transform complex datasets into actionable insights.</li>
+          </ul>
+        </div>
+
+        {/* Highlights Section */}
+        <div className="highlights-section">
+          <h3>Highlights:</h3>
+          <ul>
+            <li><FaArrowRight className="bullet-icon" /> Proven ability to enhance data quality, streamline operations, and drive business intelligence through data-driven solutions.</li>
+            <li><FaArrowRight className="bullet-icon" /> Experienced in leading data migration projects and optimizing ETL pipelines.</li>
+            <li><FaArrowRight className="bullet-icon" /> Strong commitment to data governance, security, and compliance.</li>
+          </ul>
         </div>
       </div>
     </section>

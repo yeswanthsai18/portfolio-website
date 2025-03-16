@@ -1,34 +1,93 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #1a1a2e;
-    color: white;
-  }
-  
-  .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(69, 44, 99, 0.9); /* Semi-transparent Purple */
+  backdrop-filter: blur(10px); /* Smooth Glass Effect */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 8%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* Portfolio Title */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffcc00; /* Gold Accent */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #f4e04d; /* Lighter Gold Hover */
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+  background: #5c2d91; /* Slightly Brighter Purple */
+  transform: scale(1.1);
+}
+
+/* Active Link */
+.nav-links a.active {
+  background: #facc15; /* Highlight Active Page */
+  color: #1a1a2e;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
   .nav-links {
-    list-style: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10%;
+    background: rgba(69, 44, 99, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+  }
+
+  .nav-links.open {
     display: flex;
-    gap: 20px;
   }
-  
-  .nav-links li {
-    display: inline;
-  }
-  
+
   .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
+    padding: 10px;
   }
-  
-  .nav-links a:hover {
-    color: #ffcc00;
-  }
-  
+}
+
+.home-icon {
+  font-size: 1.6rem; /* Adjust size */
+  color: white; /* Set to white */
+  transition: color 0.3s ease;
+}
+
+.home-icon:hover {
+  color: #dcdcdc; /* Slightly lighter white on hover */
+}
