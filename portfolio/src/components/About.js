@@ -6,7 +6,7 @@ import { FaEnvelope, FaMapMarkerAlt, FaPhone, FaUser, FaArrowRight } from "react
 function About() {
   return (
     <section className="about">
-      <h2 className="section-title">ABOUT ME</h2>
+      <h2 className="section-title"style={{ marginTop: "60px" }}>YESWANTH SAI TIRUMALSETTY</h2>
 
       {/* About Container */}
       <div className="about-container">

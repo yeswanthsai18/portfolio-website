@@ -1,0 +1,191 @@
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 100px 10%;
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #60a5fa;
+}
+
+/* Contact Info Cards - Now Center Aligned */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 35px;
+    border-radius: 12px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 15px rgba(96, 165, 250, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(96, 165, 250, 0.4);
+}
+
+/* Contact Icon */
+.contact-icon {
+    font-size: 3rem;
+    color: #60a5fa;
+    margin-bottom: 10px;
+}
+
+/* Contact Details */
+.contact-details {
+    text-align: center;
+}
+
+.contact-details h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 8px;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #60a5fa;
+    transform: scale(1.1);
+}
+
+/* Contact Form - Fixing Right Overflow */
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 45px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(96, 165, 250, 0.2);
+    width: calc(100% - 100px);  /* FIX: Adjusted width */
+    max-width: 900px;  /* Ensures it matches the width of the top containers */
+    text-align: left;
+    margin: auto;  /* Centering */
+}
+
+
+/* Form Input Fields */
+.form-row {
+    display: flex;
+    gap: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+}
+
+/* Send Button */
+.submit-btn {
+    background: #60a5fa;
+    padding: 16px 26px;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    color: #0f172a;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(96, 165, 250, 0.3);
+}
+
+/* Hover Effect */
+.submit-btn:hover {
+    background: #38bdf8;
+    transform: scale(1.05);
+    box-shadow: 0 0px 15px rgba(96, 165, 250, 0.6);
+}
+
+/* Portfolio Project Section */
+.portfolio-project {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #d1d5db;
+    margin-top: 30px;
+}
+
+.portfolio-project span {
+    font-weight: bold;
+    color: #60a5fa;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 14px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    width: fit-content;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.github-link:hover {
+    background: #60a5fa;
+    transform: scale(1.05);
+    color: #0f172a;
+}
+
+.github-icon {
+    font-size: 1.5rem;
+}
