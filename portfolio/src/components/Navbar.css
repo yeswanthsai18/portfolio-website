@@ -1,15 +1,16 @@
+/* Navbar Container */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(69, 44, 99, 0.95); /* Dark Purple */
-  backdrop-filter: blur(10px);
+  background: linear-gradient(to right, #16253a, #22364d); /* Lighter Navy Gradient */
+  backdrop-filter: blur(8px);
   display: flex;
-  justify-content: center; /* Center everything */
+  justify-content: center;
   align-items: center;
   padding: 12px 0;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
   z-index: 1000;
   font-family: Arial, sans-serif;
   height: 65px;
@@ -28,14 +29,14 @@
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #ffcc00;
+  color: #60a5fa; /* Matching Theme Color */
   cursor: pointer;
   transition: color 0.3s ease;
   margin-right: 20px;
 }
 
 .logo:hover {
-  color: #f4e04d;
+  color: #38bdf8; /* Slightly Brighter Blue */
 }
 
 /* Navigation Links */
@@ -55,25 +56,30 @@
 /* Button Styling */
 .nav-links a {
   text-decoration: none;
-  font-size: 1.3rem; /* Bigger Text */
+  font-size: 1.2rem;
   font-weight: bold;
-  color: white;
+  color: #f8fafc; /* Almost White */
   padding: 12px 18px;
   border-radius: 8px;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease, box-shadow 0.3s ease;
   font-family: Arial, sans-serif;
 }
 
 /* Hover Effect */
 .nav-links a:hover {
-  background: #5c2d91;
-  transform: scale(1.1);
+  background: rgba(96, 165, 250, 0.2); /* Light Blue Highlight */
+  transform: scale(1.05);
+  color: #60a5fa; /* Light Blue */
 }
 
-/* Active Link */
-.nav-links a.active {
-  background: #facc15;
-  color: #1a1a2e;
+/* Active Link - Highlights Current Page */
+.nav-links .active-link {
+  border: 2px solid #60a5fa; /* Matching Theme Color */
+  background: rgba(96, 165, 250, 0.2); /* Light Blue Background */
+  color: #60a5fa; /* Light Blue */
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.6); /* Soft Blue Glow */
+  transform: scale(1.08);
 }
 
 /* Remove Menu Icon */
@@ -84,10 +90,10 @@
 /* Home Icon */
 .home-icon {
   font-size: 2rem;
-  color: white;
+  color: #f8fafc; /* Almost White */
   transition: color 0.3s ease;
 }
 
 .home-icon:hover {
-  color: #dcdcdc;
+  color: #60a5fa; /* Light Blue */
 }

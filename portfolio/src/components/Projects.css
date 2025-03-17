@@ -2,8 +2,8 @@
 .projects {
     text-align: center;
     padding: 100px 10%;
-    background: linear-gradient(to right, #2c1a4a, #452c63);
-    color: white;
+    background: linear-gradient(to right, #0f172a, #1e293b); /* Dark Navy Blue */
+    color: #d1d5db; /* Light Gray for readability */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,6 +17,7 @@
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
+    color: #38bdf8; /* Match Navbar Color */
 }
 
 /* Projects Grid */
@@ -30,7 +31,7 @@
 
 /* Project Card */
 .project-card {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 25px;
     text-align: left;
@@ -48,7 +49,7 @@
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0px 20px rgba(255, 255, 255, 0.4);
-    border: 2px solid #facc15;
+    border: 2px solid #38bdf8; /* Match Navbar Color */
 }
 
 /* Project Image */
@@ -63,14 +64,14 @@
 .project-title {
     font-size: 1.6rem;
     font-weight: bold;
-    color: #ffcc00;
+    color: #60a5fa; /* Match Navbar Color */
     margin-top: 15px;
 }
 
 /* Project Full Description */
 .project-description {
     font-size: 1rem;
-    color: #dcdcdc;
+    color: #d1d5db; /* Light Gray */
     margin-top: 10px;
     text-align: justify;
 }
@@ -90,11 +91,13 @@
     align-items: center;
 }
 
+/* Bullet Points with Blue Tick Marks */
 .project-impact li::before {
     content: "✔";
-    color: #ffcc00;
+    color: #60a5fa; /* Match Navbar Color */
     font-weight: bold;
     margin-right: 10px;
+    font-size: 1.2rem;
 }
 
 /* Tech Stack Inspired from Experience Section */
@@ -105,8 +108,9 @@
     margin-top: 15px;
 }
 
+/* Tech Badge */
 .tech-badge {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(255, 255, 255, 0.08);
     color: white;
     padding: 8px 14px;
     border-radius: 8px;
@@ -116,15 +120,16 @@
     transition: all 0.3s ease;
 }
 
+/* Tech Badge Hover Effect */
 .tech-badge:hover {
-    border-color: #ffcc00;
-    box-shadow: 0 0px 15px rgba(255, 204, 0, 0.8);
+    border-color: #38bdf8; /* Match Navbar Color */
+    box-shadow: 0 0px 15px rgba(56, 189, 248, 0.8);
 }
 
-/* View Project Button - Gradient Purple */
+/* View Project Button */
 .view-project-btn {
-    background: linear-gradient(45deg, #5c2d91, #9d50ff);
-    color: white;
+    background: #60a5fa; /* New Default Button Color */
+    color: #0f172a;
     padding: 12px 20px;
     border-radius: 8px;
     font-weight: bold;
@@ -135,9 +140,10 @@
     transition: all 0.3s ease;
 }
 
+/* View Project Button Hover */
 .view-project-btn:hover {
-    background: linear-gradient(45deg, #9d50ff, #5c2d91);
-    box-shadow: 0 0px 15px rgba(157, 80, 255, 0.8);
+    background: #38bdf8; /* New Hover Button Color */
+    box-shadow: 0 0px 15px rgba(56, 189, 248, 0.8);
 }
 
 /* Responsive Design */

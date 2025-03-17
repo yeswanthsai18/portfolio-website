@@ -1,18 +1,20 @@
+/* About Section */
 .about {
-  background: linear-gradient(to right, #2c1a4a, #452c63); /* Purple theme */
-  color: white;
+  background: linear-gradient(to right, #0f172a, #1e293b); /* Dark Navy Blue */
+  color: #d1d5db; /* Light Gray for readability */
   padding: 80px 10%;
   text-align: center;
   font-family: Arial, sans-serif;
-  min-height: 100vh; /* Ensures Full Page Scroll */
+  min-height: 100vh;
 }
 
 /* Section Title */
 .section-title {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 30px;
+  color: #60a5fa; /* Matched Home Page Heading Color */
 }
 
 /* About Container */
@@ -25,23 +27,25 @@
 
 /* Profile Image */
 .about-image img {
-  width: 200px; /* Slightly Bigger */
+  width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 4px solid white;
+  border: 4px solid #38bdf8; /* Matched Navbar Color */
   object-fit: cover;
+  box-shadow: 0px 6px 12px rgba(56, 189, 248, 0.4);
 }
 
-/* Info Cards in Two Rows */
+/* Info Cards */
 .about-details {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
-  width: 100%;
   max-width: 600px;
   margin: auto;
 }
 
+/* Individual Info Card */
 .info-card {
   background: rgba(255, 255, 255, 0.1);
   padding: 12px 20px;
@@ -52,67 +56,87 @@
   font-size: 1rem;
   font-weight: bold;
   transition: 0.3s ease;
+  box-shadow: 0 3px 6px rgba(255, 255, 255, 0.2);
 }
 
+/* Hover Effect */
 .info-card:hover {
   background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
 }
 
 /* Icons */
 .icon {
   font-size: 1.2rem;
-  color: #ffcc00; /* Complementary to Purple */
+  color: #38bdf8; /* Matched Navbar Color */
 }
 
 /* Email Link */
 .info-card a {
-  color: white;
+  color: #d1d5db;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .info-card a:hover {
   text-decoration: underline;
+  color: #60a5fa; /* Brighter Blue */
 }
 
-/* About Bio Container */
+/* About Bio & Skills Container - Now Matches Experience Card */
 .about-bio {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1); /* MATCHING EXPERIENCE CARD */
   padding: 30px;
-  border-radius: 10px;
-  margin-top: 30px;
-  font-size: 1rem;
-  text-align: left;
+  border-radius: 15px;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 30px auto;
+  text-align: left;
+  font-size: 1rem;
   line-height: 1.6;
-  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2); /* SAME AS EXPERIENCE CARD */
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Highlights Section */
-.highlights-section {
-  margin-top: 20px;
-  padding: 15px;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
+/* Hover Effect */
+.about-bio:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0px 20px rgba(255, 255, 255, 0.4);
+  border: 2px solid #38bdf8; /* SAME AS EXPERIENCE CARD */
 }
 
-.highlights-section h3 {
-  font-size: 1.3rem;
+/* Section Headings Inside Container */
+.about-bio h3 {
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #ffcc00;
+  color: #60a5fa; /* Matched Home Page Heading Color */
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
-.highlights-section ul {
+/* Bullet Points */
+.about-bio ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.highlights-section li {
+.about-bio li {
   font-size: 1rem;
   padding: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Bullet Points Style - Blue Tick */
+.about-bio li::before {
+  content: "✔";
+  color: #60a5fa; /* Blue Tick */
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 /* Make Page Scrollable but Keep Background */

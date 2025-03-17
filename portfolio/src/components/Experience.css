@@ -2,8 +2,8 @@
 .experience {
     text-align: center;
     padding: 100px 10% 50px; /* Adjusted top padding */
-    background: linear-gradient(to right, #2c1a4a, #452c63);
-    color: white;
+    background: linear-gradient(to right, #0f172a, #1e293b); /* Dark Navy Blue */
+    color: #d1d5db; /* Light Gray for readability */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -15,15 +15,16 @@
 .section-title {
     font-size: 2.8rem;
     font-weight: bold;
-    margin-bottom: 5px; /* Reduced spacing */
+    margin-bottom: 5px;
     text-transform: uppercase;
+    color: #60a5fa; /* Matched Home Page Heading Color */
 }
 
 /* Subtitle */
 .experience-subtitle {
     font-size: 1.2rem;
-    color: #dcdcdc;
-    margin-bottom: 20px; /* Reduced space */
+    color: #d1d5db;
+    margin-bottom: 20px;
 }
 
 /* Experience Container */
@@ -31,14 +32,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Reduced gap between cards */
+    gap: 20px;
     max-width: 1000px;
     margin: auto;
 }
 
 /* Experience Card */
 .experience-card {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.1);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
@@ -52,16 +53,16 @@
     gap: 20px;
 }
 
-/* Enhanced Hover Effect */
+/* Hover Effect */
 .experience-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 0px 20px rgba(255, 255, 255, 0.4);
-    border: 2px solid #ffcc00;
+    border: 2px solid #38bdf8; /* Matched Navbar Color */
 }
 
 /* Company Logo */
 .company-logo {
-    width: 90px; /* Adjusted size */
+    width: 90px;
     height: 90px;
     border-radius: 50%;
     object-fit: cover;
@@ -80,18 +81,18 @@
 .experience-title h3 {
     font-size: 1.6rem;
     font-weight: bold;
-    color: #ffcc00;
+    color: #60a5fa; /* Matched Home Page Heading Color */
 }
 
 .experience-title p {
     font-size: 1.1rem;
-    color: #e0e0e0;
+    color: #d1d5db;
 }
 
 /* Experience Dates */
 .experience-dates {
     font-size: 1rem;
-    color: #ffcc00;
+    color: #38bdf8; /* Matched Navbar Color */
     display: flex;
     align-items: center;
     gap: 8px;
@@ -104,19 +105,22 @@
     margin: 10px 0;
 }
 
+/* Bullet Points with Blue Tick Marks */
 .experience-details li {
     font-size: 1rem;
     padding: 4px 0;
     display: flex;
     align-items: center;
     gap: 8px;
+    position: relative;
 }
 
 /* Icons inside list */
 .experience-details li::before {
     content: "✔";
-    color: #ffcc00;
+    color: #38bdf8; /* Matched Navbar Color */
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
 /* Skill Badges */
@@ -127,19 +131,24 @@
     margin-top: 10px;
 }
 
+/* Skill Badge Styling */
 .skill-badge {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
     color: white;
     padding: 7px 12px;
     border-radius: 8px;
     font-size: 0.85rem;
     font-weight: bold;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.2);
 }
 
+/* Skill Badge Hover Effect */
 .skill-badge:hover {
-    background: #ffcc00;
-    color: black;
+    background: #38bdf8; /* Matched Navbar Color */
+    color: #0f172a;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.4);
 }
 
 /* Responsive Design */

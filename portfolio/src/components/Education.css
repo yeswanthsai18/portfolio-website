@@ -1,9 +1,9 @@
 /* Education Section */
 .education {
     text-align: center;
-    padding: 80px 10% 40px; /* Reduced top padding to bring heading closer */
-    background: linear-gradient(to right, #2c1a4a, #452c63); /* Matching Purple Background */
-    color: white;
+    padding: 80px 10% 40px;
+    background: linear-gradient(to right, #0f172a, #1e293b); /* Dark Navy Blue */
+    color: #d1d5db; /* Light Gray for readability */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -15,33 +15,34 @@
 .section-title {
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 5px; /* Further reduced space */
+    margin-bottom: 5px;
     text-transform: uppercase;
+    color: #38bdf8; /* Match Navbar Color */
 }
 
 /* Subtitle */
 .education-subtitle {
     font-size: 1.3rem;
-    color: #dcdcdc;
-    margin-bottom: 20px; /* Reduced gap */
+    color: #d1d5db;
+    margin-bottom: 20px;
 }
 
 /* Education Container */
 .education-container {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Kept moderate gap for better layout */
+    gap: 30px;
     max-width: 1100px;
     margin: auto;
 }
 
 /* Education Card */
 .education-card {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 35px; /* Slightly increased padding */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 35px;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
-    width: 530px; /* Slightly increased width */
+    width: 530px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -55,12 +56,12 @@
 .education-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0px 20px rgba(255, 255, 255, 0.4);
-    border: 2px solid #facc15;
+    border: 2px solid #60a5fa; /* New Hover Color */
 }
 
 /* University Logo */
 .university-logo {
-    width: 110px; /* Increased size */
+    width: 110px;
     height: 110px;
     border-radius: 50%;
     object-fit: cover;
@@ -74,7 +75,7 @@
 .degree-title {
     font-size: 1.7rem;
     font-weight: bold;
-    color: #ffcc00;
+    color: #60a5fa; /* Interchanged Heading Color */
     text-align: center;
     margin-bottom: 8px;
 }
@@ -82,7 +83,7 @@
 /* University Name */
 .university-name {
     font-size: 1.3rem;
-    color: #e0e0e0;
+    color: #d1d5db;
     text-align: center;
     margin-bottom: 8px;
 }
@@ -91,14 +92,14 @@
 .education-info {
     text-align: center;
     font-size: 1.1rem;
-    color: #dcdcdc;
+    color: #d1d5db;
     margin-bottom: 15px;
 }
 
 /* View Transcript Button */
 .transcript-button {
-    background: #ffcc00; /* Changed to Gold */
-    color: #1a1a2e; /* Dark text for contrast */
+    background: #60a5fa; /* Interchanged Button Color */
+    color: #0f172a;
     padding: 12px 22px;
     border-radius: 8px;
     font-size: 1.1rem;
@@ -109,19 +110,20 @@
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
+/* Hover Effect */
 .transcript-button:hover {
-    background: #ffd633; /* Lighter Gold on Hover */
+    background: #38bdf8; /* New Hover Color */
     transform: scale(1.05);
 }
-
 
 /* Relevant Coursework */
 h4 {
     font-size: 1.4rem;
     font-weight: bold;
-    color: #ffcc00;
+    color: #60a5fa; /* Interchanged Heading Color */
     text-align: center;
     margin-bottom: 8px;
+    text-decoration: underline;
 }
 
 /* Coursework Container */
@@ -134,23 +136,27 @@ h4 {
 
 /* Course Badge */
 .course-badge {
-    background: #5c2d91;
+    background: rgba(255, 255, 255, 0.1);
     color: white;
     padding: 10px 16px;
     border-radius: 8px;
     font-size: 1rem;
     font-weight: bold;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.2);
 }
 
+/* Hover Effect */
 .course-badge:hover {
-    background: #7d3cff;
+    background: #60a5fa;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.4);
 }
 
 /* Responsive Design */
 @media (max-width: 900px) {
     .education {
-        padding-top: 110px; /* Adjusted for mobile view */
+        padding-top: 110px;
     }
     .education-container {
         flex-direction: column;

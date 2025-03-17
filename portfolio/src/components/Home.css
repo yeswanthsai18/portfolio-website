@@ -1,8 +1,8 @@
 /* Home Section */
 .home {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #2c1a4a, #452c63); /* Your Preferred Purple Background */
-    color: white;
+    background: linear-gradient(to right, #0f172a, #1e293b); /* Dark Navy Blue */
+    color: #d1d5db; /* Light Gray for readability */
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -17,20 +17,19 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 100px; /* Increased spacing */
+    gap: 100px;
     width: 90%;
     max-width: 1600px;
 }
 
 /* Profile Image */
 .profile-image img {
-    width: 400px; /* Increased size */
+    width: 400px;
     height: 400px;
     border-radius: 50%;
-    border: 6px solid white;
+    border: 6px solid #38bdf8; /* Navbar Accent Color */
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
-    will-change: transform;
 }
 
 .profile-image img:hover {
@@ -39,7 +38,7 @@
 
 /* Introduction Card */
 .intro-card {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
     padding: 50px;
     border-radius: 18px;
     max-width: 800px;
@@ -47,28 +46,36 @@
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
     font-size: 1.4rem;
     transition: all 0.3s ease-in-out;
-    will-change: transform;
 }
 
-/* 🔥 Fix: Prevent Glitching Effect on Hover */
+/* Prevent Hover Glitch */
 .intro-card:hover {
-    transform: scale(1.01); /* Slight effect to avoid glitch */
+    transform: scale(1.01);
 }
 
 /* Typewriter Animated Role Text */
 .typewriter {
     font-size: 2rem;
     font-weight: bold;
-    color: #facc15;
+    color: #60a5fa; /* Matching Button Color */
     display: inline-block;
     min-height: 50px;
 }
 
-/* Paragraph Text (Justified & Smaller Font) */
+/* Headings - Keeping "Hey, I'm Yeswanth" White */
+h1 {
+    color: white; /* Reverted to Previous White */
+}
+
+h2, h3 {
+    color: #60a5fa; /* Lighter Blue */
+}
+
+/* Paragraph Text (Justified & Readable) */
 .intro-card p {
-    font-size: 1rem;  /* Reduced Font Size */
-    text-align: justify; /* Justify text for better readability */
-    line-height: 1.6; /* Improve readability */
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.6;
     margin-top: 10px;
 }
 
@@ -77,9 +84,10 @@
     margin-top: 25px;
 }
 
+/* General Button Styling */
 .btn {
-    background: #7d3cff;
-    color: white;
+    background: #60a5fa; /* Lighter Blue (Previous Hover Color) */
+    color: #0f172a; /* Dark Text for Contrast */
     padding: 18px 30px;
     margin: 8px;
     border: none;
@@ -88,22 +96,20 @@
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s ease;
-    font-family: Arial, sans-serif;
     text-transform: uppercase;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(96, 165, 250, 0.3);
     text-decoration: none;
 }
 
+/* Contact Button */
 .contact-btn {
-    text-decoration: none; /* Ensure Contact Me is NOT underlined */
+    text-decoration: none;
 }
 
 /* Button Hover Effects */
 .btn:hover {
-    background: #9d50ff;
-    box-shadow: 0 0px 18px rgba(157, 80, 255, 0.8);
+    background: #38bdf8; /* Darker Blue (Previous Default Color) */
+    box-shadow: 0 0px 18px rgba(56, 189, 248, 0.8);
     transform: translateY(-3px);
 }
 

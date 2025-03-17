@@ -89,7 +89,7 @@ function Projects() {
   return (
     <section className="projects">
       <h2 className="section-title">Projects</h2>
-      <div className="projects-container">
+      <div className="projects-container"style={{ marginTop: "20px" }}>
         {projects.map((project, index) => (
           <div key={index} className="project-card">
             <img src={project.image} alt={project.title} className="project-image" />
