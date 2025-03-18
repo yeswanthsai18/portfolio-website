@@ -89,6 +89,7 @@ function Projects() {
   return (
     <section className="projects">
       <h2 className="section-title">Projects</h2>
+      <p className="experience-subtitle">A collection of projects showcasing my technical expertise</p>
       <div className="projects-container"style={{ marginTop: "20px" }}>
         {projects.map((project, index) => (
           <div key={index} className="project-card">

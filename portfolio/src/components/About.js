@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import aboutImage from "../gojo.webp"; // Ensure correct path
+import aboutImage from "C:/Users/yeswa/myprofile/portfolio-website/portfolio/src/Yeswanth photo.jpg"; // Ensure correct path
 import { FaEnvelope, FaMapMarkerAlt, FaPhone, FaDownload } from "react-icons/fa"; // Added download icon
 
 function About() {
@@ -17,15 +17,19 @@ function About() {
 
         {/* Resume Button (Centered) */}
         <div className="resume-container">
-          <a href="https://drive.google.com/file/d/1khiBy7wgSOyNXvwz1cHhckyQgU8lL3e1/view?usp=sharing" 
-             download 
-             className="resume-button">
-            <FaDownload className="icon" /> <span>Download Resume</span>
-          </a>
+        <a 
+  href="https://drive.google.com/file/d/1khiBy7wgSOyNXvwz1cHhckyQgU8lL3e1/view?usp=sharing" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="resume-button"
+>
+  <FaDownload className="icon" /> <span>Download Resume</span>
+</a>
+
         </div>
 
         {/* Information Cards in Second Line */}
-        <div className="about-details">
+        <div className="about-details"style={{ marginTop: "-20px" }}>
           <div className="info-card"><FaMapMarkerAlt className="icon" /> <span>Kent, OH, United States</span></div>
           <div className="info-card">
             <FaEnvelope className="icon" />

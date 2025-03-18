@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
-import profileImage from "C:/Users/yeswa/myprofile/portfolio-website/portfolio/src/gojo.webp"; // Ensure the correct path
+import profileImage from "C:/Users/yeswa/myprofile/portfolio-website/portfolio/src/w1.jpg"; // Profile image
+import petImage from "C:/Users/yeswa/myprofile/portfolio-website/portfolio/src/Gojo-Background-PNG.png"; // Pet image
 
 function Home() {
   const navigate = useNavigate();
@@ -9,6 +10,8 @@ function Home() {
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [pause, setPause] = useState(false);
+  const [messageIndex, setMessageIndex] = useState(0);
+  const [showPet, setShowPet] = useState(false);
 
   const roles = [
     "Data Scientist & AI Enthusiast",
@@ -21,9 +24,17 @@ function Home() {
     "Transforming Raw Data into Smart Solutions"
   ];
 
+  const welcomeMessages = [
+    "Hello there! 👋",
+    "🤖 Step Into My Data Dimension!",
+    "Want to see my projects?",
+    "Click 'View Portfolio' to begin! 🚀",
+    "🔴Nah, I'd Win🔵"
+  ];
+
   useEffect(() => {
     if (pause) {
-      setTimeout(() => setPause(false), 2000); // 2-second pause between roles
+      setTimeout(() => setPause(false), 2000);
       return;
     }
 
@@ -47,7 +58,20 @@ function Home() {
     return () => clearTimeout(timeout);
   }, [text, index, isDeleting, pause]);
 
-  // Handle Portfolio Click
+  // Cycle through welcome messages with a 3-sec gap
+  useEffect(() => {
+    const messageTimer = setInterval(() => {
+      setMessageIndex((prevIndex) => (prevIndex + 1) % welcomeMessages.length);
+    }, 6000); // 3 sec message, 3 sec gap
+
+    return () => clearInterval(messageTimer);
+  }, []);
+
+  // Show pet animation after 1 second delay
+  useEffect(() => {
+    setTimeout(() => setShowPet(true), 1000);
+  }, []);
+
   const handleViewPortfolio = () => {
     navigate("/about");
   };
@@ -79,6 +103,14 @@ function Home() {
           </div>
         </div>
       </div>
+
+      {/* Pet Animation and Welcome Messages */}
+      {showPet && (
+        <div className="pet-container">
+          <div className="message-box">{welcomeMessages[messageIndex]}</div>
+          <img src={petImage} alt="Pet" className="pet-image" />
+        </div>
+      )}
     </section>
   );
 }
